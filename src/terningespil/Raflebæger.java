@@ -6,35 +6,30 @@ public class Raflebæger {
     private Terning t1, t2;
     private int udfald1, udfald2;
 
-    // Kontruktør
+    // Kontruktør. Laver to terninger.
     public Raflebæger() {
         t1 = new Terning();
         t2 = new Terning();
     }
 
-    // Metoder
+    // Metoder. Slår de to terninger, med metoden "roll" fra "Terning"-klassen.
     public void slåTerninger() {
-        udfald1 = this.t1.roll();
-        udfald2 = this.t2.roll();
+        udfald1 = t1.roll();
+        udfald2 = t2.roll();
     }
 
-    public String resaltatUdprint() {
+    // Returnere en tekst med værdien af terningernes rul.
+    public String toString() {
         return "Terning 1: " + udfald1 + " øjne\n" + "Terning 2: " + udfald2 + " øjne\n";
     }
 
+    // Tjekker om der er slået to ens værdier. Returnere boolean.
     public boolean tjekOmEns() {
-        if (udfald1 == udfald2) {
-            return true;
-        } else {
-            return false;
-        }
+        return (udfald1 == udfald2);
     }
 
+    //Tjekker om terningerne har slået to ettere. Returnere boolean.
     public boolean tjekOmToEttere() {
-        if (udfald1 == 1 && udfald2 == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return (udfald1 == 1 && udfald2 == 1);
     }
 }
