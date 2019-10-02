@@ -20,7 +20,7 @@ public class Main {
         Raflebæger raflebæger = new Raflebæger();
         raflebæger.slåTerninger();
 
-        System.out.println(raflebæger.resaltatUdprint());
+        System.out.println(raflebæger.toString());
 
 
         if (raflebæger.tjekOmEns()) {
