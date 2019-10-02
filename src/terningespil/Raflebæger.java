@@ -4,7 +4,7 @@ public class Raflebæger {
 
     // Variable
     private Terning t1, t2;
-    private int udfald1, udfald2;
+    private int udfald1, udfald2, sum;
 
     // Kontruktør. Laver to terninger.
     public Raflebæger() {
@@ -18,9 +18,19 @@ public class Raflebæger {
         udfald2 = t2.roll();
     }
 
+    //lægger de to facevalues sammen og gemmer dem som sum
+    public int sumFace(){
+         sum=udfald1+udfald2;
+         return sum;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
     // Returnere en tekst med værdien af terningernes rul.
     public String toString() {
-        return "Terning 1: " + udfald1 + " øjne\n" + "Terning 2: " + udfald2 + " øjne\n";
+        return "Terning 1: " + udfald1 + "\n" + "Terning 2: " + udfald2 + "\n";
     }
 
     // Tjekker om der er slået to ens værdier. Returnere boolean.

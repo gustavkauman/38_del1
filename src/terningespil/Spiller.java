@@ -4,23 +4,26 @@ public class Spiller{
 
     //instance var. (attributter)
 
-    private int point, sumpoint;
+    private int point;
 
     //Konstruktør
     public Spiller(){
-
-
     }
 
-    public int Point(int a, int b){
 
-        point = a + b;
+    //tager sum fra raflebæger og ligger til samlede point
+    public void sumPoint(int sum){
+        point += sum;
+    }
 
+    public int getPoint() {
         return point;
     }
 
-    public int getSumpoint() {
-        return sumpoint;
+    //metode til at starte spiller fra 0 hvis spiller slår to ettere
+    public void startForfra(boolean input){
+        if(input == true)
+            point = 0;
     }
 
 }
