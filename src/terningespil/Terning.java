@@ -15,7 +15,7 @@ public class Terning {
     }
 
     // genererer tilfældig værdi mellem 1 og 6, samt retunerer denne værdi.
-    public int Roll(){
+    public int roll(){
 
         faceValue = (int)(Math.random()*maxval) + 1;
 

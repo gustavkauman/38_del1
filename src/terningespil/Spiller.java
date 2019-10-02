@@ -3,21 +3,21 @@ package terningespil;
 public class Spiller{
 
     //instance var. (arrtributter)
-
-    private int point, sumpoint;
+    private int point;
 
     //Kontruktør
     public Spiller(){
 
-
     }
 
-    public int Point(int a, int b){
+    //Retunerer summen af argumenterne
+    public int SumFace(int val1, int val2){
 
-        point = a + b;
+        point = val1 + val2;
 
         return point;
     }
+
 
 }
 
