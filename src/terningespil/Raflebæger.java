@@ -30,7 +30,7 @@ public class Raflebæger {
 
     // Returnere en tekst med værdien af terningernes rul.
     public String toString() {
-        return "Terning 1: " + udfald1 + "\n" + "Terning 2: " + udfald2 + "\n";
+        return "Terning 1: " + udfald1 + "\n" + "Terning 2: " + udfald2 +"\n";
     }
 
     // Tjekker om der er slået to ens værdier. Returnere boolean.
@@ -42,4 +42,21 @@ public class Raflebæger {
     public boolean tjekOmToEttere() {
         return (udfald1 == 1 && udfald2 == 1);
     }
+
+    // Tjekker om terningerne har slået to seksere
+    public boolean tjekOmToSeks(){
+
+        return (udfald1 == 6 && udfald2 == 6);
+    }
+
+    // Sætter værdien af udfaldende til den ønskede værdi
+    public void setUdfald(int terning1,int terning2){
+
+        udfald1 = terning1;
+        udfald2 = terning2;
+
+    }
+
 }
+
+

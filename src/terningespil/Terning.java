@@ -31,6 +31,10 @@ public class Terning {
         return faceValue;
 
     }
+    // Sætter værdien af facevalue
+    public void setFaceValue(int value){
+        faceValue = value;
+    }
 
     // returner en streng, hvor man kan se terningens værdi
     public String toString(){
