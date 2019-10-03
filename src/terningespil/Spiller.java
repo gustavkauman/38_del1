@@ -22,7 +22,7 @@ public class Spiller{
 
     //metode til at starte spiller fra 0 hvis spiller slår to ettere
     public void startForfra(boolean input){
-        if(input == true)
+        if(input)
             point = 0;
     }
 
