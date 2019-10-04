@@ -37,12 +37,12 @@ public class DiceTest {
                     break;
             }
         }
-        System.out.println("Antal 1'ere: " + a);
-        System.out.println("Antal 2'ere: " + b);
-        System.out.println("Antal 3'ere: " + c);
-        System.out.println("Antal 4'ere: " + d);
-        System.out.println("Antal 5'ere: " + e);
-        System.out.println("Antal 6'ere: " + f);
-        System.out.println("Antal fejlkast: " + error);
+        System.out.println("Number of 1's: " + a + " (" + (((double) a / 1000 ) * 100) + "%)");
+        System.out.println("Number of 2's: " + b + " (" + (((double) b / 1000 ) * 100) + "%)");
+        System.out.println("Number of 3's: " + c + " (" + (((double) c / 1000 ) * 100) + "%)");
+        System.out.println("Number of 4's: " + d + " (" + (((double) d / 1000 ) * 100) + "%)");
+        System.out.println("Number of 5's: " + e + " (" + (((double) e / 1000 ) * 100) + "%)");
+        System.out.println("Number of 6's: " + f + " (" + (((double) f / 1000 ) * 100) + "%)");
+        System.out.println("Number of errors: " + error + " (" + (((double) error / 1000 ) * 100) + "%)");
     }
 }

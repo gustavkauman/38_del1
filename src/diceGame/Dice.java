@@ -3,16 +3,17 @@ package diceGame;
 public class Dice {
 
     //Intance var.
-    final int maxval = 6; // max øjne værdi
-    int faceValue;      //nuværende æjne værdi
+    final int maxval = 6; // max value
+    int faceValue;      //current value
 
 
-    //kontruktør
+    //constructor
     public Dice() {
 
     }
 
-    // genererer tilfældig værdi mellem 1 og 6, samt retunerer denne værdi.
+
+    //generates random value between 1 and 6 and returns that value
     public int roll() {
 
         faceValue = (int) (Math.random() * maxval) + 1;
