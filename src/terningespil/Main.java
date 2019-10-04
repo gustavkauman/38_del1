@@ -1,5 +1,4 @@
-import terningespil.DiceCup;
-import terningespil.Player;
+package terningespil;
 
 public class Main {
 
