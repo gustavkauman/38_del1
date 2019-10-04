@@ -37,12 +37,12 @@ public class DiceTest {
                     break;
             }
         }
-        System.out.println("Number of 1's: " + a);
-        System.out.println("Number of 2's: " + b);
-        System.out.println("Number of 3's: " + c);
-        System.out.println("Number of 4's: " + d);
-        System.out.println("Number of 5's: " + e);
-        System.out.println("Number of 6's: " + f);
-        System.out.println("Number of errors: " + error);
+        System.out.println("Number of 1's: " + a + " (" + (((double) a / 1000 ) * 100) + "%)");
+        System.out.println("Number of 2's: " + b + " (" + (((double) b / 1000 ) * 100) + "%)");
+        System.out.println("Number of 3's: " + c + " (" + (((double) c / 1000 ) * 100) + "%)");
+        System.out.println("Number of 4's: " + d + " (" + (((double) d / 1000 ) * 100) + "%)");
+        System.out.println("Number of 5's: " + e + " (" + (((double) e / 1000 ) * 100) + "%)");
+        System.out.println("Number of 6's: " + f + " (" + (((double) f / 1000 ) * 100) + "%)");
+        System.out.println("Number of errors: " + error + " (" + (((double) error / 1000 ) * 100) + "%)");
     }
 }
