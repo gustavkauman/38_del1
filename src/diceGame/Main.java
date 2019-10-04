@@ -27,22 +27,26 @@ public class Main {
                     System.out.println(player1.toStringTooBad());
                     player1.startOver(true);
                     System.out.println(player1.toStringScore());
-                } else if (shake.checkIfDoubleSix()) {
+                } else {
 
                     //The loop checks for two sixes, and grants the player an extra turn
                     //The outcome of an extra turn is evaluated in the loop.
-                    while (shake.checkIfDoubleSix()) {
+                    while (shake.checkIfEqual()) {
                         shake.sumFace();
                         player1.sumPoint(shake.getSum());
                         System.out.println(player1.toStringScore());
                         System.out.println(player1.toStringExtra());
                         shake.throwDice();
                         System.out.println(shake.toStringOutcome());
-                        if (shake.checkIfDoubleOne()) {
+
+                        if (shake.checkIfEqualNotOneSix()) {
+                            continue;
+
+                        } else if (shake.checkIfDoubleOne()) {
                             System.out.println(player1.toStringTooBad());
                             player1.startOver(true);
                             System.out.println(player1.toStringScore());
-                            continue;
+                            break;
                         } else if (shake.checkIfDoubleSix()){
                            player1.sumPoint(40);
                            break;
@@ -54,10 +58,6 @@ public class Main {
                         }
                         shake.sumFace();
                     }
-                } else {
-                    shake.sumFace();
-                    player1.sumPoint(shake.getSum());
-                    System.out.println(player1.toStringScore());
                 }
 
             }
@@ -83,19 +83,23 @@ public class Main {
                     System.out.println(player2.toStringTooBad());
                     player2.startOver(true);
                     System.out.println(player2.toStringScore());
-                } else if (shake.checkIfDoubleSix()) {
-                    while (shake.checkIfDoubleSix()) {
+                } else {
+                    while (shake.checkIfEqual()) {
                         shake.sumFace();
                         player2.sumPoint(shake.getSum());
                         System.out.println(player2.toStringScore());
                         System.out.println(player2.toStringExtra());
                         shake.throwDice();
                         System.out.println(shake.toStringOutcome());
-                        if (shake.checkIfDoubleOne()) {
+
+                        if (shake.checkIfEqualNotOneSix()) {
+                            continue;
+
+                        }else if (shake.checkIfDoubleOne()) {
                             System.out.println(player2.toStringTooBad());
                             player2.startOver(true);
                             System.out.println(player2.toStringScore());
-                            continue;
+                            break;
                         } else if(shake.checkIfDoubleSix()){
                            player2.sumPoint(40);
                            break;
@@ -105,16 +109,9 @@ public class Main {
                             System.out.println(player2.toStringScore());
                         }
                     } shake.sumFace();
-
-                } else {
-                    shake.sumFace();
-                    player2.sumPoint(shake.getSum());
-                    System.out.println(player2.toStringScore());
                 }
-
               }
             }
-
         }
 
         //Checks for the winning player and congratulates

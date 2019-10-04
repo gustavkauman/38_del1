@@ -35,10 +35,10 @@ public class DiceCup {
     public String toStringOutcome() {
         return "Dice 1: " + outcome1 + "\n" + "Dice 2: " + outcome2 + "\n";
     }
-
+  
     //Checks for two equal rolls, returns boolean
-    public boolean checkIfEqual() {
-        return (outcome1 == outcome2);
+    public boolean checkIfEqualNotOneSix() {
+        return (outcome1 == outcome2 && outcome1 != 1 && outcome1 != 6);
     }
 
     //Checks for two ones
@@ -50,6 +50,12 @@ public class DiceCup {
     public boolean checkIfDoubleSix() {
         return (outcome1 == 6 && outcome2 == 6);
     }
+
+    public boolean checkIfEqual() {
+        return (outcome1 == outcome2);
+    }
+
+    //
 
     // Sætter værdien af udfaldende til den ønskede værdi -------------HUSK AT SLETTE
 

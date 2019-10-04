@@ -47,8 +47,7 @@ public class Player {
     //returns a string for a player who gets an extra roll
     public String toStringExtra() {
 
-        return "Du slog to seksere!. Du får et ekstra slag\n";
+        return "Du slog to ens!. Du får et ekstra slag\n";
     }
-
 }
 
