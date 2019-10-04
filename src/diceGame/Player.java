@@ -47,8 +47,7 @@ public class Player {
     // retunrer en string, der informerer spilleren om at han/hun/hen, har slået to ens og dermed får et ekstra slag
     public String toStringExtra() {
 
-        return "Du slog to seksere!. Du får et ekstra slag\n";
+        return "Du slog to ens!. Du får et ekstra slag\n";
     }
-
 }
 
