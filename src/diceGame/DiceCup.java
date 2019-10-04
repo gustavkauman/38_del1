@@ -2,24 +2,26 @@ package diceGame;
 
 public class DiceCup {
 
-    // Variable
+    // Variables
     private final Dice t1;
     private final Dice t2;
     private int outcome1, outcome2, sum;
 
-    // Kontruktør. Laver to terninger.
+    // Constructor. Creates two dice
     public DiceCup() {
         t1 = new Dice();
         t2 = new Dice();
     }
 
-    // Metoder. Slår de to terninger, med metoden "roll" fra "Terning"-klassen.
+
+    //Methods. Rolls the two dice with the method "roll" from "dice"-class
     public void throwDice() {
         outcome1 = t1.roll();
         outcome2 = t2.roll();
     }
 
-    //lægger de to facevalues sammen og gemmer dem som sum
+
+    //Sum the two facevalues
     public int sumFace() {
         sum = outcome1 + outcome2;
         return sum;
@@ -29,28 +31,28 @@ public class DiceCup {
         return sum;
     }
 
-    // Returnere en tekst med værdien af terningernes rul.
+    // Returns string with value of the roll
     public String toStringOutcome() {
-        return "Terning 1: " + outcome1 + "\n" + "Terning 2: " + outcome2 + "\n";
+        return "Dice 1: " + outcome1 + "\n" + "Dice 2: " + outcome2 + "\n";
     }
 
-    // Tjekker om der er slået to ens værdier. Returnere boolean.
+    //Checks for two equal rolls, returns boolean
     public boolean checkIfEqual() {
         return (outcome1 == outcome2);
     }
 
-    //Tjekker om terningerne har slået to ettere. Returnere boolean.
+    //Checks for two ones
     public boolean checkIfDoubleOne() {
         return (outcome1 == 1 && outcome2 == 1);
     }
 
-    // Tjekker om terningerne har slået to seksere
+    //Checks for two sixes
     public boolean checkIfDoubleSix() {
-
         return (outcome1 == 6 && outcome2 == 6);
     }
 
     // Sætter værdien af udfaldende til den ønskede værdi -------------HUSK AT SLETTE
+
     public void setUdfald(final int dice1, final int dice2) {
 
         outcome1 = dice1;

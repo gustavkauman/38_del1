@@ -4,14 +4,14 @@ public class Main {
 
     public static void main(final String[] args) {
 
-        // initialze players
+        // initialize players
         final Player player1 = new Player();
         final Player player2 = new Player();
         final DiceCup shake = new DiceCup();
 
         while (player1.getPoint() < 40 && player2.getPoint() < 40) {
 
-            //----------SPILLER 1 ------------------
+            //----------PLAYER 1 ------------------
             System.out.println("---------------------------------------------------------");
             System.out.println("Spiller 1:\n");
             shake.throwDice();
@@ -22,15 +22,15 @@ public class Main {
                 player1.sumPoint(shake.getSum());
                 System.out.println(player1.toStringScore());
             } else {
-                //tjekker om der er slået to ettere
+                //checks for two ones
                 if (shake.checkIfDoubleOne()) {
                     System.out.println(player1.toStringTooBad());
                     player1.startOver(true);
                     System.out.println(player1.toStringScore());
                 } else if (shake.checkIfDoubleSix()) {
 
-                    // Loopet tjekker om der er slået to seksere. I givet fal, skal spilleren have en ekstra tur.
-                    // Udfaldet af den ekstra tur, evalueres også i loopet.
+                    //The loop checks for two sixes, and grants the player an extra turn
+                    //The outcome of an extra turn is evaluated in the loop.
                     while (shake.checkIfDoubleSix()) {
                         shake.sumFace();
                         player1.sumPoint(shake.getSum());
@@ -61,13 +61,14 @@ public class Main {
                 }
 
             }
-            // Tjekker om spiller 1 har opnået 40 point. hvis dette er tilfældet breaker man ud af loopet,
-            // ellers forsætter turen med spiller 2.
+
+            //Checks if player 1 has reached 40 points, if so, the loop breaks.
+            //if not, player 2 gets a turn
             if (player1.getPoint() >= 40)
                 break;
             else{
 
-                //----------SPILLER 2 ------------------
+                //----------PLAYER 2------------------
                 System.out.println("---------------------------------------------------------");
             System.out.println("Spiller 2:\n");
             shake.throwDice();
@@ -116,7 +117,7 @@ public class Main {
 
         }
 
-        // Tjekker hvilken spiller der har vundet og skriver en løkkeønskning
+        //Checks for the winning player and congratulates
         if(player1.getPoint() >= 40)
             System.out.println(player1.toStringWinner("Spiller 1"));
         else

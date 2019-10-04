@@ -2,16 +2,16 @@ package diceGame;
 
 public class Player {
 
-    //instance var. (attributter)
+    //instance var. (attributes)
 
     private int point;
 
-    //Konstruktør
+    //Constructor
     public Player() {
     }
 
 
-    //tager sum fra raflebæger og ligger til samlede point
+    //adds sum of facevalues to players points
     public void sumPoint(final int sum) {
         point += sum;
     }
@@ -20,31 +20,31 @@ public class Player {
         return point;
     }
 
-    //metode til at starte spiller fra 0 hvis spiller slår to ettere
+    //resets a players points if player rolls two ones
     public void startOver(final boolean input) {
         if (input)
             point = 0;
     }
 
-    // retunerer en string, der angiver spillerens nuværende score (point)
+    //returns a string that tells the players score
     public String toStringScore() {
 
         return "Score: " + point;
     }
 
-    // retunerer en string, der ønsker tillykke med sejren. spilleren der har vundet skal angives som argument i metoden
+    //returns a string that congratulates player
     public String toStringWinner(final String player) {
 
         return "Tillykke " + player + ". Du har vundet!";
     }
 
-    // retunerer en string, der informerer spilleren der har slået to ettere om, at alle point er mistet.
+    //returns a string that informs a player when his points are lost
     public String toStringTooBad() {
 
         return "Desværre!. Du slog to ettere og mister alle dine point";
     }
 
-    // retunrer en string, der informerer spilleren om at han/hun/hen, har slået to ens og dermed får et ekstra slag
+    //returns a string for a player who gets an extra roll
     public String toStringExtra() {
 
         return "Du slog to seksere!. Du får et ekstra slag\n";
