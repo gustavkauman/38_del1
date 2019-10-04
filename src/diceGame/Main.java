@@ -57,9 +57,14 @@ public class Main {
                 }
 
             }
+            // Tjekker om spiller 1 har opnået 40 point. hvis dette er tilfældet breaker man ud af loopet,
+            // ellers forsætter turen med spiller 2.
+            if (player1.getPoint() >= 40)
+                continue;
+            else{
 
-            //----------SPILLER 2 ------------------
-            System.out.println("---------------------------------------------------------");
+                //----------SPILLER 2 ------------------
+                System.out.println("---------------------------------------------------------");
             System.out.println("Spiller 2:\n");
             shake.throwDice();
             System.out.println(shake.toStringOutcome());
@@ -100,9 +105,16 @@ public class Main {
                     System.out.println(player2.toStringScore());
                 }
 
+              }
             }
 
         }
+
+        // Tjekker hvilken spiller der har vundet og skriver en løkkeønskning
+        if(player1.getPoint() >= 40)
+            System.out.println(player1.toStringWinner("Spiller 1"));
+        else
+            System.out.println(player2.toStringWinner("Spiller 2"));
     }
 }
 
