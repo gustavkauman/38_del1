@@ -43,7 +43,11 @@ public class Main {
                             player1.startOver(true);
                             System.out.println(player1.toStringScore());
                             continue;
-                        } else {
+                        } else if (shake.checkIfDoubleSix()){
+                           player1.sumPoint(40);
+                           break;
+
+                        }else{
                             shake.sumFace();
                             player1.sumPoint(shake.getSum());
                             System.out.println(player1.toStringScore());
@@ -60,7 +64,7 @@ public class Main {
             // Tjekker om spiller 1 har opnået 40 point. hvis dette er tilfældet breaker man ud af loopet,
             // ellers forsætter turen med spiller 2.
             if (player1.getPoint() >= 40)
-                continue;
+                break;
             else{
 
                 //----------SPILLER 2 ------------------
@@ -88,16 +92,18 @@ public class Main {
                         System.out.println(shake.toStringOutcome());
                         if (shake.checkIfDoubleOne()) {
                             System.out.println(player2.toStringTooBad());
-                            player1.startOver(true);
+                            player2.startOver(true);
                             System.out.println(player2.toStringScore());
                             continue;
-                        } else {
+                        } else if(shake.checkIfDoubleSix()){
+                           player2.sumPoint(40);
+                           break;
+                        }else {
                             shake.sumFace();
                             player2.sumPoint(shake.getSum());
                             System.out.println(player2.toStringScore());
                         }
-                        shake.sumFace();
-                    }
+                    } shake.sumFace();
 
                 } else {
                     shake.sumFace();
