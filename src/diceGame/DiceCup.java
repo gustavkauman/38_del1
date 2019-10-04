@@ -51,21 +51,10 @@ public class DiceCup {
         return (outcome1 == 6 && outcome2 == 6);
     }
 
+    //Checks for the equals
     public boolean checkIfEqual() {
         return (outcome1 == outcome2);
     }
-
-    //
-
-    // Sætter værdien af udfaldende til den ønskede værdi -------------HUSK AT SLETTE
-
-    public void setUdfald(final int dice1, final int dice2) {
-
-        outcome1 = dice1;
-        outcome2 = dice2;
-
-    }
-
 }
 
 
