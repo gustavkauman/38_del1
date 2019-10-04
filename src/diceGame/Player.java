@@ -1,4 +1,4 @@
-package terningespil;
+package diceGame;
 
 public class Player {
 
