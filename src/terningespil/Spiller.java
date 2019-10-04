@@ -12,7 +12,7 @@ public class Spiller{
 
 
     //tager sum fra raflebæger og ligger til samlede point
-    public void addPoint(int sum){
+    public void sumPoint(int sum){
         point += sum;
     }
 
@@ -25,5 +25,6 @@ public class Spiller{
         if(input == true)
             point = 0;
     }
+
 }
 

@@ -4,7 +4,7 @@ public class Raflebæger {
 
     // Variable
     private Terning t1, t2;
-    private int udfald1, udfald2, sum, tur;
+    private int udfald1, udfald2, sum;
 
     // Kontruktør. Laver to terninger.
     public Raflebæger() {
@@ -16,11 +16,14 @@ public class Raflebæger {
     public void slåTerninger() {
         udfald1 = t1.roll();
         udfald2 = t2.roll();
-        this.sum = udfald1 + udfald2;
-        this.tur++;
     }
 
-    // Getter til summen
+    //lægger de to facevalues sammen og gemmer dem som sum
+    public int sumFace(){
+         sum=udfald1+udfald2;
+         return sum;
+    }
+
     public int getSum() {
         return sum;
     }
@@ -38,14 +41,5 @@ public class Raflebæger {
     //Tjekker om terningerne har slået to ettere. Returnere boolean.
     public boolean tjekOmToEttere() {
         return (udfald1 == 1 && udfald2 == 1);
-    }
-
-    //Metode der tæller ture
-    public boolean skiftTur() {
-        if (tur%2 == 0) {
-            return true;
-        }
-
-        return false;
     }
 }
