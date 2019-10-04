@@ -35,8 +35,8 @@ public class DiceCup {
     }
 
     // Tjekker om der er slået to ens værdier. Returnere boolean.
-    public boolean checkIfEqual() {
-        return (outcome1 == outcome2);
+    public boolean checkIfEqualNotOneSix() {
+        return (outcome1 == outcome2 && outcome1 != 1 && outcome1 != 6);
     }
 
     //Tjekker om terningerne har slået to ettere. Returnere boolean.
@@ -49,6 +49,12 @@ public class DiceCup {
 
         return (outcome1 == 6 && outcome2 == 6);
     }
+
+    public boolean checkIfEqual() {
+        return (outcome1 == outcome2);
+    }
+
+    //
 
     // Sætter værdien af udfaldende til den ønskede værdi -------------HUSK AT SLETTE
     public void setUdfald(final int dice1, final int dice2) {
