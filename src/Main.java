@@ -5,6 +5,7 @@ public class Main {
 
     public static void main(final String[] args) {
 
+        // initialze players
         final Player player1 = new Player();
         final Player player2 = new Player();
         final DiceCup shake = new DiceCup();
